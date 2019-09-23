@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout android:layout_width="188dp"
+                                                 android:layout_height="123dp"
+                                                 android:background="@drawable/background_hr_chart"
+                                                 app:layout_constraintStart_toStartOf="parent"
+                                                 app:layout_constraintTop_toTopOf="parent"
+                                                 android:paddingStart="5dp"
+                                                 android:paddingEnd="5dp"
+                                                 android:paddingBottom="5dp">
+
+        <TextView
+                android:id="@+id/tv_bpm_title"
+                android:text="HR / BPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_bpm_content"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+        <TextView
+                android:text="-"
+                android:id="@+id/tv_bpm_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"/>
+        <TextView
+                android:id="@+id/tv_zone_title"
+                android:text="Zone 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+        />
+        <TextView
+                android:id="@+id/tv_zone_content"
+                android:text="60HR-90HR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_zone_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+        <TextView
+                android:id="@+id/tv_calories"
+                android:text="58 KCALS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_zone_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+        <TextView
+                android:id="@+id/tv_max"
+                android:text="167 HR MAX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+        <TextView
+                android:id="@+id/tv_time"
+                android:text="54 HR MIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/mChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/tv_bpm_title"
+                app:layout_constraintBottom_toBottomOf="@id/tv_max">
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
